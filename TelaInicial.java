@@ -1,4 +1,4 @@
-	package JogoDaForca;
+package JogoDaForca;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -36,6 +36,8 @@ public class TelaInicial extends JFrame {
 	}
 
 	public TelaInicial() {
+		setTitle("JOGO DA FORCA");
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(TelaInicial.class.getResource("/img/Icone.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 680);
@@ -59,6 +61,13 @@ public class TelaInicial extends JFrame {
 		contentPane.add(Botao2jog);
 		
 		JLabel Botao1jog = new JLabel("");
+		Botao1jog.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				Forca1 forca1 = new Forca1();
+				forca1.setVisible(true);
+				setVisible(false);
+			}
+		});
 		Botao1jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/1jogadorB.png")));
 		Botao1jog.setBounds(553, 483, 260, 64);
 		contentPane.add(Botao1jog);

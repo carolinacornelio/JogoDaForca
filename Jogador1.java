@@ -38,6 +38,8 @@ public class Jogador1 extends JFrame {
 	}
 
 	public Jogador1() {
+		setTitle("DEFINIÇÃO DE PALAVRA");
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Jogador1.class.getResource("/img/Icone.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 680);
@@ -57,7 +59,7 @@ public class Jogador1 extends JFrame {
 					JOptionPane.showMessageDialog(null, "A palavra deve ter entre 2 e 10 letras!");
 				}
 				else {
-				Forca forca = new Forca();
+				Forca2 forca = new Forca2();
 				forca.setVisible(true);
 				setVisible(false);	
 				}

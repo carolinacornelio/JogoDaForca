@@ -37,6 +37,8 @@ public class Cadastro extends JFrame {
 	}
 
 	public Cadastro() {
+		setTitle("TELA DE CADASTRO");
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(".//src//img//Icone.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 680);
