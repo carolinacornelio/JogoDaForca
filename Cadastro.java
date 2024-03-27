@@ -20,8 +20,8 @@ import java.awt.event.MouseEvent;
 public class Cadastro extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField user1;
-	private JTextField user2;
+	public static JTextField user1;
+	public static JTextField user2;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -37,7 +37,7 @@ public class Cadastro extends JFrame {
 	}
 
 	public Cadastro() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\corne\\Downloads\\JogoDaForca\\Icone.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".//src//img//Icone.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 680);
 		setLocationRelativeTo(null);
@@ -58,7 +58,9 @@ public class Cadastro extends JFrame {
 		EntrarB.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (user1.getText().isEmpty() || user2.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Preencha os dois campos");
+					JOptionPane.showMessageDialog(null, "Preencha os dois campos!");
+				} else if (user1.getText().equals(user2.getText())){
+					JOptionPane.showMessageDialog(null, "Os nomes precisam ser diferentes!");
 				} else {
 					JOptionPane.showMessageDialog(null, user1.getText() + ", não deixe " + user2.getText() + " ver a próxima página");
 					Jogador1 jogador = new Jogador1();
@@ -68,7 +70,7 @@ public class Cadastro extends JFrame {
 			}
 		});
 		
-		EntrarB.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\EntrarB.png"));
+		EntrarB.setIcon(new ImageIcon(Cadastro.class.getResource("/img/EntrarB.png")));
 		EntrarB.setBounds(460, 451, 261, 68);
 		contentPane.add(EntrarB);
 		
@@ -97,12 +99,12 @@ public class Cadastro extends JFrame {
 		contentPane.add(user1);
 		
 		JLabel Carinha = new JLabel("");
-		Carinha.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\Carinha.png"));
+		Carinha.setIcon(new ImageIcon(Cadastro.class.getResource("/img/Carinha.png")));
 		Carinha.setBounds(536, 81, 128, 146);
 		contentPane.add(Carinha);
 		
 		JLabel FundoCadastro = new JLabel("");
-		FundoCadastro.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\FundoCadastro.png"));
+		FundoCadastro.setIcon(new ImageIcon(Cadastro.class.getResource("/img/FundoCadastro.png")));
 		FundoCadastro.setBounds(0, 0, 1186, 643);
 		contentPane.add(FundoCadastro);
 	}

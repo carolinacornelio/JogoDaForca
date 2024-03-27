@@ -1,4 +1,4 @@
-package JogoDaForca;
+	package JogoDaForca;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -15,6 +15,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.util.Iterator;
 
 public class TelaInicial extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -24,8 +26,8 @@ public class TelaInicial extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaInicial frame = new TelaInicial();
-					frame.setVisible(true);
+					TelaInicial inicio = new TelaInicial();
+					inicio.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -34,7 +36,7 @@ public class TelaInicial extends JFrame {
 	}
 
 	public TelaInicial() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\corne\\Downloads\\JogoDaForca\\ICON.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(TelaInicial.class.getResource("/img/Icone.jpg")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 680);
 		setLocationRelativeTo(null);
@@ -52,22 +54,22 @@ public class TelaInicial extends JFrame {
 				setVisible(false);
 			}
 		});
-		Botao2jog.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\2jogadoresB.png"));
+		Botao2jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/2jogadoresB.png")));
 		Botao2jog.setBounds(830, 483, 260, 64);
 		contentPane.add(Botao2jog);
 		
 		JLabel Botao1jog = new JLabel("");
-		Botao1jog.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\1jogadorB.png"));
+		Botao1jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/1jogadorB.png")));
 		Botao1jog.setBounds(553, 483, 260, 64);
 		contentPane.add(Botao1jog);
 		
 		JLabel ForcaInicio = new JLabel("");
-		ForcaInicio.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\ForcaInicio.png"));
+		ForcaInicio.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/ForcaInicio.png")));
 		ForcaInicio.setBounds(34, 93, 460, 436);
 		contentPane.add(ForcaInicio);
 		
 		JLabel FundoInicio = new JLabel("");
-		FundoInicio.setIcon(new ImageIcon("C:\\Users\\corne\\Downloads\\JogoDaForca\\FundoInicio.png"));
+		FundoInicio.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/FundoInicio.png")));
 		FundoInicio.setBounds(-14, 0, 1200, 680);
 		contentPane.add(FundoInicio);
 	}
