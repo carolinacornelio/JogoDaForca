@@ -17,18 +17,23 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 public class Forca1 extends JFrame {
-	String[] frutas = {"MORANGO","KIWI","BANANA","TAMARINDO","ABACAXI"};
-	String[] esportes = {"BASQUETE","FUTEBOL","XADREZ","CORRIDA","SALTO"};
-	String[] paises = {"EGITO","ARGENTINA","PERU","ALEMANHA","BANGLADESH"};
-	String[] animais = {"CACHORRO","LEOPARDO","COBRA","GATO","GUAXINIM"};
-	String[] profissoes = {"ADVOGADO","DENTISTA","POLICIAL","OTORRINO","DIPLOMATA"};
-	String[] cores = {"AZUL","VERMELHO","DOURADO","PRETO","CINZA"};
-	String[] transportes = {"CARRO","BICICLETA","MOTO","SKATE","NAVIO"};
+	String[] frutas = {"MORANGO","KIWI","BANANA","TAMARINDO","ABACAXI", "AMORA", "CEREJA", "ABACATE", "LARANJA", "TANGERINA"};
+	String[] esportes = {"BASQUETE","FUTEBOL","XADREZ","CORRIDA","SALTO", "FUTSAL", "BADMINTON", "DAMA", "CANOAGEM", "ATLETISMO"};
+	String[] paises = {"EGITO","ARGENTINA","PERU","ALEMANHA","BANGLADESH", "URUGUAI", "PARAGUAI", "VATICANO", "MARROCOS", "FIJI"};
+	String[] animais = {"CACHORRO","LEOPARDO","COBRA","GATO","GUAXINIM", "HIPOPOTAMO", "PINGUIM", "BALEIA", "GORILA", "ARARA"};
+	String[] profissoes = {"ADVOGADO","DENTISTA","POLICIAL","OTORRINO","DIPLOMATA", "PROFESSOR", "PRESIDENTE", "ANALISTA", "VIGIA", "MODELO"};
+	String[] cores = {"AZUL","VERMELHO","DOURADO","PRETO","CINZA", "BRANCO", "LARANJA", "MARGENTA", "VIOLETA", "VERDE"};
+	String[] transportes = {"CARRO","BICICLETA","MOTO","SKATE","NAVIO", "PATINETE", "TREM", "CANOA", "BOTE", "FOGUETE"};
 	String[] planetas = {"MARTE","NETUNO","TERRA","SATURNO","URANO"};
-	String[] instrumentos = {"FLAUTA","PIANO","HARPA","PANDEIRO","TAMBOR"};
-	String[] estados = {"PERNAMBUCO","BAHIA","AMAZONAS","ACRE","SERGIPE"};	
-	String[] categorias = {"Fruta","Esporte","País","Animal","Profissão","Cor","Transporte","Planeta","Instrumento","Estado"};
-	double x = Math.random()*10;
+	String[] instrumentos = {"FLAUTA","PIANO","HARPA","PANDEIRO","TAMBOR", "BATERIA", "GUITARRA", "GAITA", "VIOLINO", "VIOLONCELO"};
+	String[] estados = {"PERNAMBUCO","BAHIA","AMAZONAS","ACRE","SERGIPE", "ALAGOAS", "ACRE", "RORAIMA", "TOCANTINS"};	
+	String[] orgaos = {"PELE", "INTESTINO", "FARINGE", "LARINGE", "MEDULA", "RIM", "BEXIGA", "TIREOIDE", "BAÇO", "TRAQUEIA"};
+	String[] alimentos = {"LASANHA", "SUSHI", "PIZZA", "COXINHA", "MACARRONADA", "PASTEL", "DOBRADINHA", "ARRUMADINHO", "TAPIOCA", "CUSCUZ"};
+	String[] capitais = {"NAIROBI", "DENVER", "RECIFE", "HELSINK","PALMAS", "OSLO", "MOSCOU", "ARACAJU", "SALVADOR", "FORTALEZA"};
+	String[] marcas = {"NIKE", "ADIDAS", "PUMA", "PRADA", "VERSACE", "VALENTINO", "GOOGLE", "BMW", "MARVEL", "LEGO"};
+	String[] objetos = {"COLAR", "ANEL", "DADO", "CELULAR", "GARRAFA", "COMPUTADOR", "CADEIRA", "ESTOJO", "QUADRO", "VASO"};
+ 	String[] categorias = {"Fruta","Esporte","País","Animal","Profissão","Cor","Transporte","Planeta","Instrumento","Estado", "Orgãos", "Alimentos", "Capitais", "Marcas", "Objetos"};
+	double x = Math.random()*categorias.length;
 	int num = (int)x;
 	String palavra = "";
 	public static String dica="";
@@ -55,7 +60,7 @@ public class Forca1 extends JFrame {
 		setTitle("JOGO DA FORCA COM UM JOGADOR");
 		setResizable(false);
 		
-		int indice = (int)(Math.random()*5);
+		int indice = (int)(Math.random()*10);
 		switch (num) {
 		case 0:
 			palavra = frutas[indice];
@@ -86,7 +91,7 @@ public class Forca1 extends JFrame {
 			dica = "É um meio de transporte";
 			break;
 		case 7:
-			palavra = planetas[indice];
+			palavra = planetas[(int)(Math.random()*5)];
 			dica = "É um planeta do sistema solar";
 			break;
 		case 8:
@@ -94,8 +99,28 @@ public class Forca1 extends JFrame {
 			dica = "É um instrumento musical";
 			break;
 		case 9:
-			palavra = estados[indice];
+			palavra = estados[(int)(Math.random()*9)];
 			dica = "É um estado do Brasil";
+			break;
+		case 10:
+			palavra = orgaos[indice];
+			dica = "É um órgão do corpo humano";
+			break;
+		case 11:
+			palavra = alimentos[indice];
+			dica = "É um alimento";
+			break;
+		case 12:
+			palavra = capitais[indice];
+			dica = "É uma capital de algum país ou estado brasileiro";
+			break;
+		case 13:
+			palavra = marcas[indice];
+			dica = "É alguma marca/empresa famosa";
+			break;
+		case 14:
+			palavra = objetos[indice];
+			dica = "É um objeto";
 			break;
 		}
 		
