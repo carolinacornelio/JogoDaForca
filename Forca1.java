@@ -31,7 +31,7 @@ public class Forca1 extends JFrame {
 	String[] alimentos = {"LASANHA", "SUSHI", "PIZZA", "COXINHA", "MACARRONADA", "PASTEL", "DOBRADINHA", "ARRUMADINHO", "TAPIOCA", "CUSCUZ"};
 	String[] capitais = {"NAIROBI", "DENVER", "RECIFE", "HELSINK","PALMAS", "OSLO", "MOSCOU", "ARACAJU", "SALVADOR", "FORTALEZA"};
 	String[] marcas = {"NIKE", "ADIDAS", "PUMA", "PRADA", "VERSACE", "VALENTINO", "GOOGLE", "BMW", "MARVEL", "LEGO"};
-	String[] objetos = {"COLAR", "ANEL", "DADO", "CELULAR", "GARRAFA", "COMPUTADOR", "CADEIRA", "ESTOJO", "QUADRO", "VASO"};
+	String[] objetos = {"COLAR", "ANEL", "ARCO", "CELULAR", "GARRAFA", "COMPUTADOR", "CADEIRA", "ESTOJO", "QUADRO", "VASO"};
  	String[] categorias = {"Fruta","Esporte","País","Animal","Profissão","Cor","Transporte","Planeta","Instrumento","Estado", "Orgãos", "Alimentos", "Capitais", "Marcas", "Objetos"};
 	double x = Math.random()*categorias.length;
 	int num = (int)x;
@@ -112,7 +112,7 @@ public class Forca1 extends JFrame {
 			break;
 		case 12:
 			palavra = capitais[indice];
-			dica = "É uma capital de algum país ou estado brasileiro";
+			dica = "É uma capital";
 			break;
 		case 13:
 			palavra = marcas[indice];
