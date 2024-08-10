@@ -24,7 +24,7 @@ public class Forca1 extends JFrame {
 	String[] profissoes = {"ADVOGADO","DENTISTA","POLICIAL","OTORRINO","DIPLOMATA", "PROFESSOR", "PRESIDENTE", "ANALISTA", "VIGIA", "MODELO"};
 	String[] cores = {"AZUL","VERMELHO","DOURADO","PRETO","CINZA", "BRANCO", "LARANJA", "MARGENTA", "VIOLETA", "VERDE"};
 	String[] transportes = {"CARRO","BICICLETA","MOTO","SKATE","NAVIO", "PATINETE", "TREM", "CANOA", "BOTE", "FOGUETE"};
-	String[] planetas = {"MARTE","NETUNO","TERRA","SATURNO","URANO"};
+	String[] planetas = {"MARTE","NETUNO","TERRA","SATURNO","URANO","MERCÚRIO", "VÊNUS", "JÚPITER"};
 	String[] instrumentos = {"FLAUTA","PIANO","HARPA","PANDEIRO","TAMBOR", "BATERIA", "GUITARRA", "GAITA", "VIOLINO", "VIOLONCELO"};
 	String[] estados = {"PERNAMBUCO","BAHIA","AMAZONAS","ACRE","SERGIPE", "ALAGOAS", "ACRE", "RORAIMA", "TOCANTINS"};	
 	String[] orgaos = {"PELE", "INTESTINO", "FARINGE", "LARINGE", "MEDULA", "RIM", "BEXIGA", "TIREOIDE", "BAÇO", "TRAQUEIA"};
@@ -91,7 +91,7 @@ public class Forca1 extends JFrame {
 			dica = "É um meio de transporte";
 			break;
 		case 7:
-			palavra = planetas[(int)(Math.random()*5)];
+			palavra = planetas[(int)(Math.random()*8)];
 			dica = "É um planeta do sistema solar";
 			break;
 		case 8:
