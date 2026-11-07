@@ -1,22 +1,15 @@
 package JogoDaForca;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
-import java.awt.Font;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
-import java.util.Iterator;
 
 public class TelaInicial extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -44,21 +37,24 @@ public class TelaInicial extends JFrame {
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		JLabel info = new JLabel("");
+		info.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				JOptionPane.showMessageDialog(null, "PROJETO FINAL DE ICC\n\nGrupo:\n - Carolina Cornélio\n- Fernanda Abreu\n- Natália Lira\n- Rayssa Kauanny\n\nProf.ª: Débora Araújo ");
+			}
+		});
+		info.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/Info.png")));
+		info.setBounds(987, 0, 180, 90);
+		contentPane.add(info);
+		
+		JLabel univasf = new JLabel("");
+		univasf.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/univasf.png")));
+		univasf.setBounds(860, 0, 380, 90);
+		contentPane.add(univasf);
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel Botao2jog = new JLabel("");
-		Botao2jog.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				Cadastro cadastro = new Cadastro();
-				cadastro.setVisible(true);
-				setVisible(false);
-			}
-		});
-		Botao2jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/2jogadoresB.png")));
-		Botao2jog.setBounds(830, 483, 260, 64);
-		contentPane.add(Botao2jog);
 		
 		JLabel Botao1jog = new JLabel("");
 		Botao1jog.addMouseListener(new MouseAdapter() {
@@ -71,6 +67,18 @@ public class TelaInicial extends JFrame {
 		Botao1jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/1jogadorB.png")));
 		Botao1jog.setBounds(553, 483, 260, 64);
 		contentPane.add(Botao1jog);
+		
+		JLabel Botao2jog = new JLabel("");
+		Botao2jog.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				Cadastro cadastro = new Cadastro();
+				cadastro.setVisible(true);
+				setVisible(false);
+			}
+		});
+		Botao2jog.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/2jogadoresB.png")));
+		Botao2jog.setBounds(830, 483, 260, 64);
+		contentPane.add(Botao2jog);		
 		
 		JLabel ForcaInicio = new JLabel("");
 		ForcaInicio.setIcon(new ImageIcon(TelaInicial.class.getResource("/img/ForcaInicio.png")));
